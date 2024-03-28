@@ -1,0 +1,26 @@
+<p>country-info works!</p>
+
+<div *ngIf="country$ | async as country">
+  <p>{{ country | json }}</p>
+
+
+</div>
+
+
+<mat-card class="example-card" *ngIf="country$ | async as country">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ country.name.common }}</mat-card-title>
+      <mat-card-subtitle>{{ country.name.official }}</mat-card-subtitle>
+      <img src="{{country.flags.png}}" alt="{{country.flags.alt}}" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Currencies: {{ country.currencies | json}}</p>
+    <p>Languages: {{ country.languages}}</p>
+    <p>Capital: {{ country.capital}}</p>
+    <p>Region: {{ country.region}}</p>
+    <p>startOfWeek: {{ country.startOfWeek}}</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quaerat mollitia blanditiis est eaque laudantium reprehenderit. Enim ex voluptatem quae dolorum ducimus temporibus cupiditate adipisci ab maiores assumenda! Porro, nemo.
+  </mat-card-content>
+</mat-card>

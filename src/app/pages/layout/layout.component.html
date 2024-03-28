@@ -1,0 +1,22 @@
+<app-search
+  (onSearchValue)="searchCountryValue($event)"
+></app-search>
+
+<app-search
+(onSearchValue)="searchByRegion($event)"
+>
+
+</app-search>
+
+<!-- <p>{{country | json}}</p> -->
+<!-- <div *ngFor="let item of countrySearchList">
+  <p>{{item.name.common | json}}</p>
+
+</div> -->
+<!-- <app-country-list></app-country-list> -->
+
+  <div *ngFor="let country of countriesList">
+    <p>{{country.name.common}}</p>
+  </div>
+  <!-- <p>{{countriesList | json }}</p> -->
+

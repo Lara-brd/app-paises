@@ -1,0 +1,26 @@
+<!-- <p *ngFor=" countries$ | async as country">{{country.name}}</p> -->
+
+
+<div>
+  {{country.name | json}}
+</div>
+
+
+<section *ngIf="countries$ | async as countries; else loader">
+
+  <div class="card"  *ngFor = "let country of countries" (click)="getCountry(country.name.common)">
+
+    <div class="flat">
+      <img src="{{ country.flags.png}}" alt="">
+    </div>
+    <p>{{ country.name.common }}</p>
+  </div>
+
+</section>
+
+<ng-template #loader>
+
+  <div class="loader">
+    <mat-spinner diameter="60"></mat-spinner>
+  </div>
+</ng-template>
