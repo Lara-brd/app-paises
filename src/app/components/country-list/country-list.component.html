@@ -1,5 +1,23 @@
-<!-- <p *ngFor=" countries$ | async as country">{{country.name}}</p> -->
+<div class="card-wrapper" *ngIf="countries.length > 0; else loader">
+  <div class="card" *ngFor="let country of countries">
+    <div class="flag">
+      <img [src]="country.flags.png" [alt]="country.flags.alt">
+    </div>
+    <h4>{{country.name.common}}</h4>
+  </div>
+</div>
 
+<ng-template #loader>
+  <div class="loader">
+    <mat-spinner diameter="60"></mat-spinner>
+  </div>
+</ng-template>
+
+
+
+
+<!-- <p *ngFor=" countries$ | async as country">{{country.name}}</p> -->
+<!--
 
 <div>
   {{country.name | json}}
@@ -23,4 +41,4 @@
   <div class="loader">
     <mat-spinner diameter="60"></mat-spinner>
   </div>
-</ng-template>
+</ng-template> -->

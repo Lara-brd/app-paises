@@ -1,6 +1,9 @@
-<input
-  type="text"
-  [placeholder]="placeholder"
-  (keyup.enter)="onSendValue(inputValue.value)"
-  #inputValue
->
+
+<mat-form-field class="example-full-width" appearance="outline">
+  <mat-label>{{label}}</mat-label>
+  <input
+    matInput
+    type ="text"
+    (keyup.enter)="onSendValue(inputValue.value)"
+    #inputValue>
+</mat-form-field>

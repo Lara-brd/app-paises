@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Country, CountryNameFlag } from '../../interfaces/country';
 import { Observable } from 'rxjs';
@@ -11,29 +11,11 @@ import { Router } from '@angular/router';
 })
 export class CountryListComponent implements OnInit{
 
-  countries$: Observable<CountryNameFlag []> | null = null;//countries como un observable
+  @Input() countries:Country [] = [];
 
-  data:any = []
+  ngOnInit(): void {
 
-  constructor( private dataSvc:DataService, private router:Router ){}
-
-  paises:Country[] = [];
-
-  country:any;
-
-  ngOnInit(): void {}
-
-  getCountry(name:string):void{
-    this.dataSvc.selectedCountry = name;
-    this.router.navigate(['/info']);
   }
-
-  searchCountry(country:string){
-    this.dataSvc.searchCountry(country).subscribe(country => {
-      this.country = country;
-    })
-  }
-
 
 
 }

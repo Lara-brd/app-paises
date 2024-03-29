@@ -1,22 +1,30 @@
-<app-search
-  (onSearchValue)="searchCountryValue($event)"
-></app-search>
 
-<app-search
-(onSearchValue)="searchByRegion($event)"
->
+<div class="tools">
 
-</app-search>
+  <!-- input search country -->
+  <app-search
+    [label]="'Enter a country'"
+    (onSearchValue)="searchCountryValue($event)"
+  ></app-search>
 
-<!-- <p>{{country | json}}</p> -->
-<!-- <div *ngFor="let item of countrySearchList">
-  <p>{{item.name.common | json}}</p>
+  <!-- Input search by region -->
+  <app-search
+  [label]="'Enter a region'"
+  (onSearchValue)="searchByRegion($event)"
+  >
+  </app-search>
 
-</div> -->
-<!-- <app-country-list></app-country-list> -->
+  <span class="spacer"></span>
 
-  <div *ngFor="let country of countriesList">
-    <p>{{country.name.common}}</p>
-  </div>
-  <!-- <p>{{countriesList | json }}</p> -->
+  <button mat-raised-button color="warn">Warn</button>
+  <!-- all countries -->
+
+
+
+</div>
+
+<!-- countries list -->
+<app-country-list [countries]="countriesList"></app-country-list>
+
+
 
