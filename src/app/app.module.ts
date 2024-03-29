@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { LayoutComponent } from './pages/layout/layout.component';
 import { CountryListComponent } from './components/country-list/country-list.component';
 import { CountryInfoComponent } from './pages/country-info/country-info.component';
@@ -22,6 +24,7 @@ import { SearchComponent } from './components/search/search.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule
   ],

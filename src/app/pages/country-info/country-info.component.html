@@ -6,8 +6,8 @@
   <mat-card class="card" *ngIf="country">
     <mat-card-header>
       <mat-card-title-group>
-        <mat-card-title>{{country.name.common}}</mat-card-title>
-        <mat-card-subtitle>{{country.name.official}}</mat-card-subtitle>
+        <mat-card-title>{{country.name.common | titlecase }}</mat-card-title>
+        <mat-card-subtitle>{{country.name.official | titlecase}}</mat-card-subtitle>
       </mat-card-title-group>
     </mat-card-header>
     <mat-card-content>
