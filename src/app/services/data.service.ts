@@ -26,16 +26,16 @@ export class DataService {
   }
 
 
-  getCountryInfo(){
-    console.log('service', this.selectedCountry)
-    if(!this.selectedCountry){
-      return;
-    }else{
-      return this.http.get<Country []>(`https://restcountries.com/v3.1/name/${this.selectedCountry}`).pipe(
-        map(country => country[0]),
-      )
-    }
-  }
+  // getCountryInfo(){
+  //   console.log('service', this.selectedCountry)
+  //   if(!this.selectedCountry){
+  //     return;
+  //   }else{
+  //     return this.http.get<Country []>(`https://restcountries.com/v3.1/name/${this.selectedCountry}`).pipe(
+  //       map(country => country[0]),
+  //     )
+  //   }
+  // }
 
 
   searchCountry(countryName:string){

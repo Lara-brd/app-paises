@@ -7,17 +7,17 @@
     min-width: 400px;
     margin:10px;
     border-radius: 5px;
-    border:1px solid rgba(128, 128, 128, 0.749);
+    border:1px solid rgba(128, 128, 128, 0.378);
     display: flex;
     align-items: center;
     padding: 10px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     h4{
       margin: 0 0 0 10px;
     }
   }
 }
-
 
 .flag{
   width: 50px;

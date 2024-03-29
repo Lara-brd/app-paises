@@ -1,17 +1,55 @@
-<p>country-info works!</p>
+<!-- <p>{{country | json }}</p> -->
+
+<div class="card-wrapper">
+
+  <!-- TODO ngIf si no loader -->
+  <mat-card class="example-card" *ngIf="country">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{country.name.common}}</mat-card-title>
+        <mat-card-subtitle>{{country.name.official}}</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+
+      <div class="flag">
+        <img [src]="country.flags.png" [alt]="country.flags.alt">
+      </div>
+      <mat-divider></mat-divider>
+
+      <p><span>Capital:</span> {{country.capital}}</p>
+      <p><span>Region: </span>{{country.region}}</p>
+      <p><span>Population:</span> {{country.population}}</p>
+      <p><span>Star of week:</span> {{country.startOfWeek}}</p>
+      <p><span>Timezones:</span> {{country.timezones}}</p>
+
+      <div>
+        <button mat-flat-button color="primary" routerLink="./home">Back</button>
+      </div>
+    </mat-card-content>
+
+
+
+  </mat-card>
+
+</div>
+
+
+
+<!-- <p>country-info works!</p>
 
 <div *ngIf="country$ | async as country">
   <p>{{ country | json }}</p>
 
 
-</div>
+</div> -->
 
 
-<mat-card class="example-card" *ngIf="country$ | async as country">
+<!-- <mat-card class="example-card" *ngIf="country$ | async as country">
   <mat-card-header>
     <mat-card-title-group>
-      <mat-card-title>{{ country.name.common }}</mat-card-title>
-      <mat-card-subtitle>{{ country.name.official }}</mat-card-subtitle>
+      <mat-card-title>{{ country.name.common }}</mat-card-title> -->
+      <!-- <mat-card-subtitle>{{ country.name.official }}</mat-card-subtitle>
       <img src="{{country.flags.png}}" alt="{{country.flags.alt}}" >
     </mat-card-title-group>
   </mat-card-header>
@@ -23,4 +61,4 @@
     <p>startOfWeek: {{ country.startOfWeek}}</p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quaerat mollitia blanditiis est eaque laudantium reprehenderit. Enim ex voluptatem quae dolorum ducimus temporibus cupiditate adipisci ab maiores assumenda! Porro, nemo.
   </mat-card-content>
-</mat-card>
+</mat-card> -->

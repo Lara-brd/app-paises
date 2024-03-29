@@ -9,13 +9,16 @@ import { Router } from '@angular/router';
   templateUrl: './country-list.component.html',
   styleUrl: './country-list.component.scss'
 })
-export class CountryListComponent implements OnInit{
+export class CountryListComponent{
 
   @Input() countries:Country [] = [];
 
-  ngOnInit(): void {
+  constructor(private router:Router, private dataSvc:DataService){}
 
+  //Establece el país seleccionado en servicios y nos lleva a la página de información del país
+  getCountry(country:string){
+    this.dataSvc.selectedCountry = country;
+    this.router.navigate(['/info'])
   }
-
 
 }

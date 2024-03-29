@@ -1,9 +1,35 @@
+
+.card-wrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .example-card {
   max-width: 400px;
   margin-bottom: 8px;
+
+  .flag{
+    margin:20px 10px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
 }
 
 
-img{
-  width: 100px;
+mat-divider{
+  margin:20px 0;
 }
+
+
+
+
+// img{
+//   width: 100px;
+// }

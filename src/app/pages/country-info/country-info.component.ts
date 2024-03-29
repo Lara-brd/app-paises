@@ -10,12 +10,15 @@ import { Observable } from 'rxjs';
 })
 export class CountryInfoComponent implements OnInit {
 
-  country$:Observable<Country> | null | undefined = null;
+  country:Country | null = null;
 
   constructor( private dataSvc:DataService){}
 
   ngOnInit(): void {
-  this.country$ = this.dataSvc.getCountryInfo()
+    this.dataSvc.searchCountry(this.dataSvc.selectedCountry).subscribe((data:any) => {
+      this.country = data[0];
+    })
+
   }
 
 }

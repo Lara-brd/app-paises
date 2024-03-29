@@ -1,5 +1,5 @@
 <div class="card-wrapper" *ngIf="countries.length > 0; else loader">
-  <div class="card" *ngFor="let country of countries">
+  <div class="card" *ngFor="let country of countries" (click)="getCountry(country.name.common)">
     <div class="flag">
       <img [src]="country.flags.png" [alt]="country.flags.alt">
     </div>
