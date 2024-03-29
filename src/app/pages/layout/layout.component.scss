@@ -1,8 +1,25 @@
 .tools{
   display: flex;
   padding:20px;
+  flex-wrap:wrap;
 }
 
 app-search{
   margin-right: 20px;
+}
+
+
+// Mobile
+@media (max-width: 550px) {
+  .tools{
+    flex-direction: column;
+  }
+
+  app-search{
+    margin:0;
+  }
+
+  button{
+    width: 100%;
+  }
 }

@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   .card{
-    min-width: 400px;
+    width: 400px;
     margin:10px;
     border-radius: 5px;
     border:1px solid rgba(128, 128, 128, 0.378);
@@ -16,6 +16,7 @@
     h4{
       margin: 0 0 0 10px;
     }
+    transition:500ms ease-out;
   }
 }
 
@@ -36,6 +37,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card:hover{
+  transform: scale(1.05); /* Cambia el tamaño de la tarjeta al hacer hover */
+}
+
+
+
+// Mobile
+@media (max-width: 550px) {
+  .card{
+    width: 100%;
+  }
 }
 
 

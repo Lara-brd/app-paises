@@ -16,10 +16,13 @@ export class LayoutComponent implements OnInit{
   constructor( private dataSvc:DataService){}
 
   ngOnInit(): void {
+    this.displayAllCountries();
+  }
+
+  displayAllCountries(){
     this.dataSvc.getAllCountries().subscribe(countries => {
       this.countriesList = countries;
     })
-
   }
 
   searchCountryValue(term:string){
