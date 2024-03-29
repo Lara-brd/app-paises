@@ -1,27 +1,29 @@
 # AppCountries
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+Este proyecto utiliza Angular y Jasmine para mostrar información sobre países utilizando la API de REST "Countries". Permite a los usuarios ver una lista de todos los países, buscar un país específico, filtrar países por región y ver información detallada de un país seleccionado.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Características
+Lista de países: Muestra todos los países de la API en la página principal.
+Búsqueda de países: Permite a los usuarios buscar un país utilizando un campo de búsqueda.
+Filtrado por región: Permite a los usuarios filtrar países por región.
+Detalles del país: Al hacer clic en un país, muestra información detallada en una página separada.
+Diseño responsive: El diseño se adapta a diferentes tamaños de pantalla.
+Estilo hover: Se aplica estilo "hover" a todos los elementos interactivos de la página.
+Tests unitarios: Se incluyen tests unitarios para garantizar la calidad del código.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación 
+Clona este repositorio en tu máquina local.
+Instala las dependencias utilizando el comando npm install.
 
-## Build
+## Ejecución del proyecto
+Ejecuta ng serve para iniciar el servidor de desarrollo.
+Navega a http://localhost:4200/ en tu navegador para ver la aplicación.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Ejecución de Test Unitarios
+Ejecuta ng test para ejecutar los tests unitarios.
+Los resultados de los tests se mostrarán en la consola y en un navegador.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
