@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LayoutComponent } from './layout.component';
+import { DataService } from '../../services/data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 xdescribe('LayoutComponent', () => {
   let component: LayoutComponent;
@@ -8,7 +10,8 @@ xdescribe('LayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LayoutComponent]
+      declarations: [LayoutComponent],
+      providers:[DataService]
     })
     .compileComponents();
 
